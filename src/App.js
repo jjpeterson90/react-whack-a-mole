@@ -7,18 +7,19 @@ function App() {
   const [dens, setDens] = useState(getDensState())
   const [points, setPoints] = useState(0)
 
-  // effects
+  // effect loops infinite loop
   useEffect( () => {
     startGame()
   }, [])
 
-  // helpers
+  // rewrite den configuration every 1500 ms
   function startGame() {
     setInterval(() => {
       setDens(getDensState())
     }, 1500)
   }
 
+  // loops through dens to re-assign visibility status randomly
   function getDensState() {
     return new Array(9).fill({}).map(() => {
       return {
@@ -27,11 +28,12 @@ function App() {
     })
   }
 
+  // adds a point on function call
   function onMoleWhacked() {
     setPoints(points + 1)
   }
 
-  // renders
+  // loops through dens and returns Mole components with associated prop values
   const denElements = dens.map((den, index) => {
     return (
       <Mole key={`mole-${index}`} visible={dens[index]['isMoleVisible']} onMoleWhacked={onMoleWhacked} />

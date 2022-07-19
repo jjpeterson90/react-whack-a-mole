@@ -3,6 +3,7 @@ import MoleIcon from './Mole.svg'
 
 function Mole(props) {
 
+  // adds or removes image source depending on visibility status
   const visibility = () => {
     if (props.visible == true) {
       return MoleIcon
