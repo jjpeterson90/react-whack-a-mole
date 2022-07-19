@@ -8,7 +8,7 @@ function App() {
   const [points, setPoints] = useState(0)
 
   // effects
-  useEffect(() => {
+  useEffect( () => {
     startGame()
   }, [])
 
