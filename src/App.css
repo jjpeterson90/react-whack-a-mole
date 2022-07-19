@@ -1,5 +1,5 @@
 body {
-  background-color: grey;
+  background-color: burlywood;
 }
 
 .App {
@@ -9,6 +9,6 @@ body {
 .dens {
   margin: 0px auto;
   width: 540px;
-  background-color: grey;
+  background-color: burlywood;
   border-radius: 20%;
 }

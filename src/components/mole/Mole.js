@@ -2,9 +2,20 @@ import './Mole.css'
 import MoleIcon from './Mole.svg'
 
 function Mole(props) {
+
+  const visibility = () => {
+    if (props.visible == true) {
+      return MoleIcon
+    } else {
+      return ''
+    }
+  }
+
   return (
-    <div className="den">
-      <img src={MoleIcon} className="Mole" alt="Mole" />
+    <div>
+      <div className="den">
+        <img src={visibility()} onClick={props.onMoleWhacked} className="Mole"/>
+      </div>
     </div>
   )
 }
